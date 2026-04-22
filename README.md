@@ -1,1 +1,1 @@
-# miniassignment
+This project compares several major tech stocks using Yahoo Finance data to explore the balance between return and risk. The target users are beginner investors and students interested in financial markets. The analysis aims to help users better understand whether higher returns are always associated with higher volatility and which stock appears more suitable for different risk preferences.
