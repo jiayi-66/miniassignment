@@ -1,89 +1,96 @@
 # Apple vs Microsoft: Which Stock Shows a Better Balance Between Return and Risk?
 
 ## Project Overview
-This project compares Apple (AAPL) and Microsoft (MSFT) to examine which stock shows a more balanced performance between return and risk.
+This project compares Apple (AAPL) and Microsoft (MSFT) to examine which stock shows a better balance between return and risk using historical stock data retrieved from WRDS.
 
-The analysis is designed for **beginner investors** and **students interested in financial markets** who want a simple and interpretable comparison of two major technology stocks.
+The project is designed as a simple and practical financial analysis for users who want to understand how two major technology stocks differ in terms of performance stability and risk-adjusted return.
 
-## Research Question
-**Which stock, Apple or Microsoft, shows a more balanced performance between return and risk?**
+## Problem Definition
+Investors often care not only about return, but also about the risk taken to achieve that return. A stock with a high return may also involve high volatility or a large drawdown. Therefore, this project compares Apple and Microsoft from both return and risk perspectives to identify which stock provides a more balanced performance.
 
-## Target User
-- Beginner investors
-- Students interested in stock market analysis
-- Users who want a basic comparison of return and risk in large technology stocks
+## Target Users
+The intended users are:
 
-## Business Relevance
-This project is business-related because stock performance analysis is valuable for investment decision-making.  
-Comparing return and risk can help users better understand how different assets may suit different investment preferences.
+- beginner investors
+- students interested in financial markets
+- users who want a simple comparison of two major technology stocks
 
 ## Data Source
-- **Source:** WRDS
-- **Companies analysed:** Apple (AAPL) and Microsoft (MSFT)
-- **Time period:** 2021-01-01 to 2025-01-01
-- **Access date:** [Please replace with your actual access date]
+This project uses historical stock data retrieved from **WRDS**.
 
-> Note: The notebook uses WRDS data access. The exact WRDS library name, table name, and field names may vary depending on database access permissions and should be checked before running the code.
+- Source: WRDS
+- Stocks analysed: Apple (AAPL) and Microsoft (MSFT)
+- Variables used: historical prices / returns data
+- Access date: *[Please add your actual access date here]*
 
-## Project Files
-- `apple_microsoft_wrds_analysis.ipynb` – Jupyter Notebook containing the full analysis
-- `apple_microsoft_risk_return_summary.csv` – exported summary table
-- `requirements.txt` – required Python packages
-- `README.md` – project introduction and usage guide
+> Note: If the raw dataset is not included in this repository due to access restrictions, users should retrieve the data directly from WRDS using their own account and follow the notebook instructions.
 
-## Methods
-This project uses Python for data retrieval, cleaning, analysis, and visualisation.
+## Analytical Goals
+The analysis focuses on the following indicators:
 
-Main analytical steps:
-1. Connect to WRDS
-2. Retrieve stock data for Apple and Microsoft
-3. Clean and prepare the dataset
-4. Calculate key performance indicators:
-   - mean daily return
-   - daily volatility
-   - annualised return
-   - annualised volatility
-   - return-risk ratio
-   - maximum drawdown
-5. Visualise cumulative returns and key return-risk indicators
-6. Export the summary table as a CSV file
+- **Daily Returns**  
+  Measures day-to-day percentage changes in stock price.
 
-## Key Metrics Explained
-- **Annualised Return:** estimated yearly return based on average daily return
-- **Annualised Volatility:** estimated yearly risk based on daily return fluctuations
-- **Return-Risk Ratio:** annualised return divided by annualised volatility
-- **Maximum Drawdown:** the largest peak-to-trough decline during the sample period
+- **Annualised Return**  
+  Estimates the average yearly return of each stock.
 
-A stock with a higher return-risk ratio and a smaller maximum drawdown may be considered more balanced between return and risk.
+- **Annualised Volatility**  
+  Measures the yearly level of return fluctuation and risk.
+
+- **Maximum Drawdown**  
+  Captures the largest peak-to-trough decline over the sample period.
+
+- **Return-Risk Ratio**  
+  Compares return relative to volatility to evaluate risk-adjusted performance.
+
+## Workflow
+The Python workflow in this project includes:
+
+1. Retrieving historical stock data from WRDS
+2. Cleaning and preparing the dataset
+3. Calculating daily returns
+4. Computing annualised return, annualised volatility, maximum drawdown, and return-risk ratio
+5. Visualising the comparison between Apple and Microsoft
+6. Exporting the summary results as a CSV file
+
+## Visualisations
+This project includes bar charts for side-by-side comparison of key indicators:
+
+- **Annual Return**
+- **Annual Volatility**
+- **Return-Risk Ratio**
+
+These visualisations help users quickly compare the performance and risk characteristics of Apple and Microsoft.
+
+## Output
+The project exports the final summary table as:
+
+- `apple_microsoft_risk_return_summary.csv`
+
+This file can be used for further review, reporting, or inclusion in the GitHub repository.
 
 ## Key Findings
-This project compares Apple and Microsoft using several return-risk indicators.  
-The final result depends on the calculated outputs in the notebook, especially:
+This notebook compares Apple and Microsoft from a return-risk perspective using historical stock data from WRDS.
+
+The main indicators include:
+
 - annualised return
 - annualised volatility
 - return-risk ratio
 - maximum drawdown
 
-The stock with the stronger overall balance across these metrics is interpreted as the more balanced choice for the target user.
+Based on these metrics, the stock with the higher return-risk ratio and a more stable downside profile can be interpreted as the more balanced stock for beginner investors.
 
-> Please update this section after running the notebook and checking the final results.
+> Replace this section with your exact findings after running the notebook.  
+> For example:  
+> - Apple had a higher annualised return, but also higher volatility.  
+> - Microsoft showed more stable performance with a lower drawdown.  
+> - Overall, Microsoft/Apple offered a better balance between return and risk.
 
-Example:
-- Microsoft showed lower volatility and a more stable drawdown profile.
-- Apple achieved stronger return growth over some periods.
-- Based on the return-risk ratio, **[replace with your actual result]** appeared to provide the more balanced performance.
-
-## Visual Outputs
-The notebook includes:
-- cumulative return line chart
-- bar chart of annual return
-- bar chart of annual volatility
-- bar chart of return-risk ratio
-
-These visualisations help users compare performance and downside risk more clearly.
-
-## How to Run the Project
-
-### 1. Clone or download the repository
-```bash
-git clone [your-repository-link]
+## Repository Structure
+```text
+.
+├── notebook.ipynb
+├── README.md
+├── requirements.txt
+└── apple_microsoft_risk_return_summary.csv
